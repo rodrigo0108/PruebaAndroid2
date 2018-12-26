@@ -1,0 +1,46 @@
+
+ext.versions = [
+        supportLib       : '28.0.0',
+        supportConstraint: '1.0.2',
+        supportMultidex  : '1.0.1',
+        butterknife      : '8.8.1',
+        glide            : '4.3.0',
+        kotlin           : '1.1.51'
+]
+
+def version = ext.versions
+ext.library = [
+        support_appcompat      : 'com.android.support:appcompat-v7:' + version.supportLib,
+        support_recyclerview   : 'com.android.support:recyclerview-v7:' + version.supportLib,
+        support_v4             : 'com.android.support:support-v4:' + version.supportLib,
+        support_v13            : 'com.android.support:support-v13:' + version.supportLib,
+        support_design         : 'com.android.support:design:' + version.supportLib,
+        support_cardview       : 'com.android.support:cardview-v7:' + version.supportLib,
+        support_palette        : 'com.android.support:palette-v7:' + version.supportLib,
+        support_customtabs     : 'com.android.support:customtabs:' + version.supportLib,
+        support_annotations    : 'com.android.support:support-annotations:' + version.supportLib,
+        support_vector_drawable: 'com.android.support:support-vector-drawable:' + version.supportLib,
+        support_constraint     : 'com.android.support.constraint:constraint-layout:' + version.supportConstraint,
+        support_multidex       : 'com.android.support:multidex:' + version.supportMultidex,
+        butterknife            : 'com.jakewharton:butterknife:' + version.butterknife,
+        butterknife_compiler   : 'com.jakewharton:butterknife-compiler:' + version.butterknife,
+        glide                  : 'com.github.bumptech.glide:glide:' + version.glide,
+        glide_compiler         : 'com.github.bumptech.glide:compiler:' + version.glide,
+]
+
+ext.versionsTest = [
+        junit             : '4.12',
+        espresso          : '2.2.2',
+        mockito           : '2.6.8',
+        robolectric       : '3.4.2',
+        robolectricShadows: '3.3'
+]
+
+def versionTest = ext.versionsTest
+ext.libraryTest = [
+        junit              : 'junit:junit:' + versionTest.junit,
+        mockito_core       : 'org.mockito:mockito-core:' + versionTest.mockito,
+        robolectric        : 'org.robolectric:robolectric:' + versionTest.robolectric,
+        robolectric_shadows: 'org.robolectric:shadows-support-v4:' + versionTest.robolectricShadows,
+        expresso_core      : 'com.android.support.test.espresso:espresso-core:' + versionTest.espresso,
+]

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">peruappstest</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_cart">Cart</string>
+    <string name="navigation_account">Account</string>
+</resources>

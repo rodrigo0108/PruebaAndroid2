@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.jozedi.peruappstest"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+}
+
+apply from: "$rootProject.rootDir/app/library.gradle"
+
+def library = ext.library
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation library.support_appcompat
+    implementation library.support_recyclerview
+    implementation library.support_v4
+    implementation library.support_v13
+    implementation library.support_design
+    implementation library.support_cardview
+    implementation library.support_palette
+    implementation library.support_customtabs
+    implementation library.support_annotations
+    implementation library.support_vector_drawable
+    implementation library.support_constraint
+    implementation library.support_multidex
+
+    implementation library.butterknife
+    annotationProcessor library.butterknife_compiler
+}
